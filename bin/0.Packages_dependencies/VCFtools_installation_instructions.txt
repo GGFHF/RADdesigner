@@ -1,0 +1,48 @@
+VCFtools INSTALLATION INSTRUCTIONS
+You can download the vcfTools binaries from https://vcftools.github.io/man_latest.html, and follow the installation instructions
+After installation, be sure to run on a terminal the following command line:
+		$ export PERL5LIB=PATH_TO_/VCFtools/perl
+
+ALTERNATIVE INSTALLATION WITH MINICONDA3
+
+We suggests to install Miniconda3 to have access to stable and updated versions of VCFtools (and many other packages).
+to install Miniconda3 in Linux environment run on a terminal:
+                $ cd PATH_TO_THE_APPS_DIRECTORY_WHERE_MINICONDA3_WILL_BE_INSTALLED
+		$ wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+		$ chmod u+x Miniconda3-latest-Linux-x86_64.sh
+		$ ./Miniconda3-latest-Linux-x86_64.sh -b -p $DOCUMENTOS/Miniconda3
+		$ rm Miniconda3-latest-Linux-x86_64.sh
+
+		$ cd $DOCUMENTOS/Miniconda3/bin
+		$ ./conda config --add channels conda-forge
+		$ ./conda config --add channels defaults
+		$ ./conda config --add channels r
+		$ ./conda config --add channels bioconda
+
+		$ cd $DOCUMENTOS/Miniconda3/bin
+		$ ./pip install gffutils
+		$ ./conda install --yes joblib
+		$ ./conda install --yes biopython
+		$ ./conda install --yes matplotlib
+
+		$ cd $DOCUMENTOS/Miniconda3/bin
+		$ ./conda create --yes --name py27 python=2.7
+
+		$ cd $DOCUMENTOS/Miniconda3/bin
+		$ source activate py27
+		$ cd $DOCUMENTOS/Miniconda3/envs/py27/bin
+		$ ./pip install gffutils
+		$ ./conda install --yes joblib
+		$ ./conda install --yes biopython
+		$ ./conda install --yes matplotlib
+		$ source deactivate py27
+
+
+To install VCFtools:
+
+		$ cd PATH_TO Miniconda3/Miniconda3/bin
+		$ ./conda create --yes --name vcftools vcftools
+
+Run in a terminal
+
+		$ export PERL5LIB=PATH_TO_Miniconda3/envs/VCFtools/perl
