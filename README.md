@@ -12,7 +12,7 @@ Scripts content:
 
 * `0.R_dependendies_installation.R` R scritp to install and call the packages required to run subsequent R scripts.
 * `VCFtools_installation_instructions.txt` Text file with the command line instructions to install VCFtools.
-* `1.Filtering_multiallelicSNPs.sh` Bash script to filter milti-allelicSNPs from .vcf files, inside this script we call two R scripts:
+* `1.Filtering_multiallelicSNPs.sh` Bash script to filter multi-allelicSNPs from .vcf files, inside this script we call two R scripts:
 * `multi_bi_allelic_filtered.R` R script to separate multi-allelic from bi-allelic SNPs in each vcf.file
 * `plot_percentage_multi_allelicSNPs.R` R script to plot the percentage of multi-allelic SNPs filtered for each combination. Also this script plots the number of filtered loci/SNPs after filtering.
 * `2.Depth_locusSNPerror.R` R script that contains a custom workflow to quantify and plot read-depth and both locus/SNP error rates. Also this script quantifies and plots the dendrograms of similarity for each sample and for each combination.
